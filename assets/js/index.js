@@ -40,11 +40,16 @@ function renderAvatar(user) {
     $('#wellcome').html('欢迎&nbsp;&nbsp;' + uname)
 
     if (user.user_pic !== null) {
-        $('.layui-nav-img').attr('src', user.user_pic).show()
+        $('.layui-nav-img')
+            .attr('src', user.user_pic)
+            .show()
         $('.text-avatar').hide()
     } else {
-        $('.layui-nav-img').hide()
+        $('.layui-nav-img')
+            .hide()
         let first = uname[0].toUpperCase()
-        $('.text-avatar').html(first).show()
+        $('.text-avatar')
+            .html(first)
+            .show()
     }
 }
